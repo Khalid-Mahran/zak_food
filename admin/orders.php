@@ -21,7 +21,7 @@ include '../includes/header.php';
     <h2>All Orders</h2>
     <br>
 
-    <table>
+    <div class="table-wrap"><table>
         <tr>
             <th>ID</th>
             <th>Customer</th>
@@ -57,7 +57,7 @@ include '../includes/header.php';
                 </td>
             </tr>
         <?php endwhile; ?>
-    </table>
+    </table></div>
 </div>
 
 <?php include '../includes/footer.php'; ?>

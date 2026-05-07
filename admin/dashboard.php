@@ -16,10 +16,10 @@ include '../includes/header.php';
     <br>
 
     <div class="grid">
-        <div class="card"><h3>Total Users</h3><p><?php echo $users; ?></p></div>
-        <div class="card"><h3>Pending Restaurants</h3><p><?php echo $pending_vendors + $pending_shops; ?></p></div>
-        <div class="card"><h3>Pending Products</h3><p><?php echo $pending_products; ?></p></div>
-        <div class="card"><h3>Total Orders</h3><p><?php echo $orders; ?></p></div>
+        <div class="card stat"><span class="stat-icon">👥</span><h3>Total Users</h3><p><?php echo $users; ?></p></div>
+        <div class="card stat"><span class="stat-icon">🏪</span><h3>Pending Restaurants</h3><p><?php echo $pending_vendors + $pending_shops; ?></p></div>
+        <div class="card stat"><span class="stat-icon">🍔</span><h3>Pending Products</h3><p><?php echo $pending_products; ?></p></div>
+        <div class="card stat"><span class="stat-icon">📦</span><h3>Total Orders</h3><p><?php echo $orders; ?></p></div>
     </div>
 
     <br>

@@ -58,7 +58,7 @@ $total = 0;
         <div class="alert">Cart is empty</div>
         <a class="btn" href="/index.php">Back To Menu</a>
     <?php else: ?>
-        <table>
+        <div class="table-wrap"><table>
             <tr>
                 <th>Item</th>
                 <th>Restaurant</th>
@@ -120,7 +120,7 @@ $total = 0;
                     </td>
                 </tr>
             <?php endforeach; ?>
-        </table>
+        </table></div>
 
         <br>
         <h3>Items Total: <?php echo $total; ?> EGP</h3>

@@ -4,7 +4,7 @@ requireRole('admin');
 
 if (isset($_GET['action']) && isset($_GET['id'])) {
     $id = intval($_GET['id']);
-    $action = $_GET['action'] === 'approve' ? 'approved' : 'rejected';
+    if ($_GET['action']==='approve'){$action='approved';}elseif($_GET['action']==='reject'){$action='rejected';}else{header('Location:/admin/shops.php');exit;}
 
     mysqli_query($conn, "UPDATE shops SET status = '$action' WHERE id = $id");
     header('Location: /admin/shops.php');
@@ -24,7 +24,7 @@ include '../includes/header.php';
     <h2>Restaurant Requests</h2>
     <br>
 
-    <table>
+    <div class="table-wrap"><table>
         <tr>
             <th>ID</th>
             <th>Restaurant</th>
@@ -53,7 +53,7 @@ include '../includes/header.php';
                 </td>
             </tr>
         <?php endwhile; ?>
-    </table>
+    </table></div>
 </div>
 
 <?php include '../includes/footer.php'; ?>

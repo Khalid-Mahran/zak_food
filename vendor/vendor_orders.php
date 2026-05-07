@@ -56,7 +56,7 @@ include '../includes/header.php';
     <h2>Restaurant Orders</h2>
     <br>
 
-    <table>
+    <div class="table-wrap"><table>
         <tr>
             <th>Order</th>
             <th>Customer</th>
@@ -90,16 +90,16 @@ include '../includes/header.php';
                     <form method="POST" style="padding:0;background:none;">
                         <input type="hidden" name="order_item_id" value="<?php echo $item['order_item_id']; ?>">
                         <select name="item_status">
-                            <option value="pending">pending</option>
-                            <option value="preparing">preparing</option>
-                            <option value="ready">ready</option>
+                            <option value="pending" <?php if ($item["item_status"]==="pending") echo "selected"; ?>>Pending</option>
+                            <option value="preparing" <?php if ($item["item_status"]==="preparing") echo "selected"; ?>>Preparing</option>
+                            <option value="ready" <?php if ($item["item_status"]==="ready") echo "selected"; ?>>Ready</option>
                         </select>
                         <button class="btn" type="submit">Save</button>
                     </form>
                 </td>
             </tr>
         <?php endwhile; ?>
-    </table>
+    </table></div>
 </div>
 
 <?php include '../includes/footer.php'; ?>
