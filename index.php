@@ -114,7 +114,7 @@ $products = mysqli_query($conn, "SELECT products.*,
                 <h3><?php echo htmlspecialchars($shop_row['name']); ?></h3>
                 <p><?php echo htmlspecialchars($shop_row['description']); ?></p>
                 <p class="small"><?php echo htmlspecialchars($shop_row['address']); ?></p>
-                <a class="btn btn-dark" href="/index.php?shop=<?php echo $shop_row['id']; ?>">View Menu</a>
+                <a class="btn btn-dark" href="/restaurant.php?id=<?php echo $shop_row['id']; ?>">View Menu</a>
             </div>
         <?php endwhile; ?>
     </div>
